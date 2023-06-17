@@ -64,9 +64,6 @@ namespace FileSyncApp
             MessageBox.Show(status);
         }
 
-
-
-
         public string CheckChanges()
         {
             string status = "";
@@ -110,7 +107,7 @@ namespace FileSyncApp
                     }
                 }
 
-                // Check for deleted files
+                // Проверка наличия удаленных файлов
                 foreach (string file in destinationFiles)
                 {
                     string fileName = Path.GetFileName(file);
@@ -120,7 +117,7 @@ namespace FileSyncApp
                     }
                 }
 
-                // Check for copied files to flash drive
+                // Проверяет, скопированы ли файлы на флэш-накопитель
                 string[] flashDriveFiles = Directory.GetFiles("F:\\Forms1");
 
                 foreach (string file in flashDriveFiles)
