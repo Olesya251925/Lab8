@@ -71,11 +71,11 @@ namespace FileSyncApp
             if (!Directory.Exists(sourceDirectory) || !Directory.Exists(destinationDirectory))
             {
                 status =
-                "Source or destination directory does not exist.";
+                "Исходный или конечный каталог не существует.";
             }
             else
             {
-                // Check for created files
+                // Проверка наличия созданных файлов
                 string[] sourceFiles = Directory.GetFiles(sourceDirectory);
                 string[] destinationFiles = Directory.GetFiles(destinationDirectory);
 
@@ -88,7 +88,7 @@ namespace FileSyncApp
                     }
                 }
 
-                // Check for modified files
+                // Проверка наличия измененных файлов
                 foreach (string file in sourceFiles)
                 {
                     string fileName = Path.GetFileName(file);
