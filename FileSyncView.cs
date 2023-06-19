@@ -52,4 +52,14 @@ namespace FileSyncApp
             statusTextBox.Text += status + Environment.NewLine;
         }
     }
+
+    // Интерфейс, представляющий представление (view) синхронизации файлов
+    public interface IFileSyncView
+    {
+        // Событие, возникающее при запросе на синхронизацию
+        event EventHandler SyncRequested;
+
+        // Метод для отображения статуса синхронизации
+        void DisplayStatus(string status);
+    }
 }
